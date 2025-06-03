@@ -7,11 +7,9 @@ st.markdown("<h1 style='text-align: center;'>Visky Krisztina</h1>", unsafe_allow
 col1, col2 = st.columns([1,2])
 
 with col1:
-    # Row 2: Two columns below the titlewith col1:
     st.image("images/photo.png", width=400)
 
 with col2:
-    #st.title("Visky Krisztina")
     content = """
         👋 Hey there! I’m Krisz — a curious human on a mission to master Python, one project (and occasional bug) at a time. 
          This portfolio is my digital playground, where I’ve documented the chaos, creativity, and caffeine-fueled projects I’ve built while learning to code.  
@@ -21,4 +19,5 @@ with col2:
         🙏 Thanks for stopping by!       
    """
     st.info(content)
-
+st.markdown("---")
+st.markdown("<h5 style='text-align: center;'>Below are some of the apps I’ve built with Python and its extended family — Django, Selenium, Streamlit, and a few cousins I met along the way 😄 </h5>", unsafe_allow_html=True)
