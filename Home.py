@@ -3,16 +3,25 @@ import pandas
 
 st.set_page_config(layout="wide")
 
-st.markdown(
-    """
-    <style>
-        .main {
-            padding: 40px 60px;
-        }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+st.markdown("""
+<style>
+/* Default sidebar width */
+[data-testid="stSidebar"] {
+    width: 200px !important;
+    max-width: 200px !important;
+}
+
+/* Sidebar responsive for narrow screens */
+@media (max-width: 800px) {
+    [data-testid="stSidebar"] {
+        width: 120px !important;
+        max-width: 120px !important;
+    }
+}
+</style>
+""", unsafe_allow_html=True)
+
+st.markdown("<h1 style='text-align: center;'>Visky Krisztina</h1>", unsafe_allow_html=True)
 
 col1, col2 = st.columns([1,2])
 
@@ -20,9 +29,7 @@ with col1:
     st.image("images/photo.png", width=400)
 
 with col2:
-    st.markdown("<h1 style='text-align: center;'>Visky Krisztina</h1>", unsafe_allow_html=True)
-    content = """
-        👋 Hey there! I’m Krisz — a curious human on a mission to master Python, one project (and occasional bug) at a time. 
+    content = """👋 Hey there! I’m Krisz — a curious human on a mission to master Python, one project (and occasional bug) at a time. 
          This portfolio is my digital playground, where I’ve documented the chaos, creativity, and caffeine-fueled projects I’ve built while learning to code.  
         💡 You’ll find projects of all shapes and sizes and fueled by a mix of trial, error, and determination.
         Feel free to explore, and don’t hesitate to share your thoughts, feedback, or brilliant ideas — I’d love to hear what you think!
