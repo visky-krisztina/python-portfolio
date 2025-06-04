@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas
 
 st.set_page_config(layout="wide")
 # Row 1: Title centered
@@ -21,3 +22,23 @@ with col2:
     st.info(content)
 st.markdown("---")
 st.markdown("<h5 style='text-align: center;'>Below are some of the apps I’ve built with Python and its extended family — Django, Selenium, Streamlit, and a few cousins I met along the way 😄 </h5>", unsafe_allow_html=True)
+
+col3, empty_col, col4 = st.columns([1.5, 0.5, 1.5])
+
+df = pandas.read_csv("data.csv", sep=";")
+
+with col3:
+    for idx, row in df.iterrows():
+        if idx % 2 == 0:  # even index -> odd-numbered row (1st, 3rd, etc.)
+            st.header(row["title"])
+            st.write(row["description"])
+            st.image("images/" + row["image"])
+            st.write(f"[Source code on Github]({row['url']})")
+
+with col4:
+    for idx, row in df.iterrows():
+        if idx % 2 == 1:  # odd index -> even-numbered row (2nd, 4th, etc.)
+           st.header(row["title"])
+           st.write(row["description"])
+           st.image("images/" + row["image"])
+           st.write(f"[Source code on Github]({row['url']})")   
