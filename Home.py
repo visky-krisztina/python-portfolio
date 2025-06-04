@@ -59,6 +59,8 @@ df = pandas.read_csv("data.csv", sep=";")
 
 with col3:
     for idx, row in df.iterrows():
+        if row.empty or str(row[0]).startswith('#'):
+            continue
         if idx % 2 == 0:  # even index -> odd-numbered row (1st, 3rd, etc.)
            st.markdown(f"### {row['title']}")
            st.write(row["description"])
@@ -79,6 +81,8 @@ with col3:
 
 with col4:
     for idx, row in df.iterrows():
+        if row.empty or str(row[0]).startswith('#'):
+           continue
         if idx % 2 == 1:
             st.markdown(f"### {row['title']}")
             st.write(row["description"])
