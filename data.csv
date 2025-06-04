@@ -1,6 +1,6 @@
 title;description;url;image
 To-do App;A simple To-Do List Manager implemented in Python with three interfaces for creating and completing tasks.;https://github.com/visky-krisztina/python-todoApp-cli-gui-web;1.png
-Portfolio Website;A website built entirely in Python and Streamlit to showcase coding projects and apps. You are looking at it just now :P ;https://visky-krisztina.streamlit.app;2.png
+Portfolio Website;A website built entirely in Python and Streamlit to showcase coding projects and apps. You are looking at it just now :P ;https://github.com/visky-krisztina/python-portfolio;2.png
 #PDF Templates;A script that generates PDF templates of multiple pages given some predefined guidelines.;https://www.google.com;3.png
 #PDF Invoices;A script that reads invoice records from Excel files and automatically generates PDF invoices.;https://www.google.com;4.png
 #Positive News Site;A website that gets data from a news API and uses sentiment analysis to publish only positive news.;https://www.google.com;5.png
